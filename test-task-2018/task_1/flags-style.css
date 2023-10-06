@@ -1,0 +1,114 @@
+/* * {
+   padding: 0px;
+   margin: 0px;
+} */
+
+body {
+   display: flex;
+   flex-direction: column;
+   background-color: #f0f0f0;
+}
+
+.flag {
+   width: 300px;
+   height: 200px;
+   margin-bottom: 20px;
+   display: flex;
+   flex-direction: column;
+}
+
+/*! Флаг Украины */
+.ukraine .blue-stripe {
+   background-color: #0055a4;
+   height: 50%;
+}
+
+.ukraine .yellow-stripe {
+   background-color: #ffd100;
+   height: 50%;
+}
+
+/*! Флаг Японии */
+.japan .white-background {
+   background-color: white;
+   height: 100%;
+}
+
+.red-circle {
+   background-color: red;
+   width: 120px;
+   height: 120px;
+   border-radius: 50%;
+   margin: 40px auto;
+}
+
+/*! Флаг Исландии */
+.blue-background {
+   background-color: #005cbf;
+   width: 100%;
+   height: 100%;
+   position: relative;
+}
+
+.white-cross.horizontal {
+   background-color: white;
+   position: absolute;
+   top: 45%;
+   width: 100%;
+   height: 20px;
+   z-index: 1;
+}
+
+.white-cross.vertical {
+   background-color: white;
+   position: absolute;
+   left: 30%;
+   width: 20px;
+   height: 100%;
+   z-index: 1;
+}
+
+.red-cross.horizontal {
+   background-color: red;
+   position: absolute;
+   top: 47.5%;
+   width: 100%;
+   height: 10px;
+   z-index: 2;
+}
+
+.red-cross.vertical {
+   background-color: red;
+   position: absolute;
+   left: 31.7%;
+   width: 10px;
+   height: 100%;
+   z-index: 2;
+}
+
+/* Флаг Чехии  */
+.czech {
+   position: relative;
+}
+
+.czech .blue-stripe {
+   background-color: #0c4da2;
+   height: 50%;
+}
+
+.czech .white-stripe {
+   background-color: #ffffff;
+   height: 50%;
+}
+
+.triangle {
+   width: 0;
+   height: 0;
+   transform: rotate(90deg);
+   border-left: 100px solid transparent;
+   border-right: 100px solid transparent;
+   border-bottom: 200px solid #d7141a;
+   position: absolute;
+   top: 0;
+   left: 0;
+}
