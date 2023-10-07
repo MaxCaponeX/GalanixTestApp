@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="./style.css" />
+      <script src="./app.js" defer></script>
+      <title>Search University</title>
+   </head>
+   <body>
+      <header>
+         <div class="header">
+            <h1 class="title">Search University</h1>
+         </div>
+      </header>
+      <section>
+         <div class="container">
+            <div class="main-content">
+               <h1>Поиск университетов по стране</h1>
+               <input
+                  type="text"
+                  id="countryInput"
+                  placeholder="Введите страну (например: ukraine)"
+               />
+               <button id="searchButton">Отправить</button>
+               <button id="resetButton">Сброс</button>
+               <table id="universityTable">
+                  <thead>
+                     <tr>
+                        <th>#</th>
+                        <th>Имя</th>
+                        <th>Страна</th>
+                        <th>Сайт</th>
+                     </tr>
+                  </thead>
+                  <tbody></tbody>
+               </table>
+            </div>
+         </div>
+      </section>
+   </body>
+</html>
