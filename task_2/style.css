@@ -1,4 +1,5 @@
 body {
+   position: relative;
    display: flex;
    flex-direction: column;
    justify-content: center;
@@ -55,11 +56,44 @@ body {
 }
 
 .overlay {
-   background: black;
-   /* opacity: 0.3; */
+   position: absolute;
+   left: 0;
+   top: 0;
    width: 100%;
    height: 100%;
-   z-index: 100;
+   background: black;
+   opacity: 0.5;
+   animation: slideIn 0.5s ease-in-out;
+   z-index: 1;
+}
+
+.wrapper-btn-img {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   animation: slideIn 0.5s ease-in;
+   z-index: 2;
+}
+.wrapper-btn-img img {
+   height: 100%;
+   width: 100%;
+}
+
+.wrapper-btn-img button {
+   cursor: pointer;
+}
+
+@keyframes slideIn {
+   from {
+      opacity: 0;
+   }
+   to {
+      opacity: 0.5;
+   }
 }
 
 /*? Медиа-запрос для экранов шириной от 900px до 1000px */

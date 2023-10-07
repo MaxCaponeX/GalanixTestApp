@@ -26,3 +26,39 @@ const updateInfoBlock = (img) => {
 document.body.insertBefore(infoBlock, document.body.firstChild);
 
 updateInfoBlock(images);
+
+//!! Task 2 (2.8)
+const imageGrid = document.querySelector(".image-grid");
+
+imageGrid.addEventListener("click", (e) => {
+   if (e.target.tagName) {
+      const focusImage = document.createElement("div");
+      focusImage.innerHTML = `<img src="${e.target.src}" alt="${e.target.alt}" />`;
+
+      const closeButton = document.createElement("button");
+      closeButton.textContent = "Close";
+
+      const overlay = document.createElement("div");
+      overlay.classList.add("overlay");
+
+      const wrapperForBtnImg = document.createElement("div");
+      wrapperForBtnImg.classList.add("wrapper-btn-img");
+
+      closeButton.addEventListener("click", () => {
+         focusImage.remove();
+         closeButton.remove();
+         overlay.remove();
+      });
+
+      overlay.addEventListener("click", () => {
+         focusImage.remove();
+         closeButton.remove();
+         overlay.remove();
+      });
+
+      wrapperForBtnImg.appendChild(focusImage);
+      wrapperForBtnImg.appendChild(closeButton);
+      document.body.appendChild(wrapperForBtnImg);
+      document.body.appendChild(overlay);
+   }
+});
