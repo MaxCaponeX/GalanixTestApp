@@ -24,6 +24,7 @@ body {
    height: 100%;
    display: block;
    border: solid rgb(70, 70, 70) 5px;
+   border-radius: 50%;
 }
 
 .image-grid img:nth-child(4n + 1) {
