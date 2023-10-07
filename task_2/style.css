@@ -4,7 +4,7 @@ body {
    align-items: center;
    margin: 0;
    padding: 0;
-   height: 100vh;
+   min-height: 100vh;
 }
 
 .containter {
@@ -38,4 +38,26 @@ body {
    border-color: yellow;
    transform: rotate(45deg);
    transition: 0.5s;
+}
+
+/*? Медиа-запрос для экранов шириной от 900px до 1000px */
+@media (max-width: 1000px) {
+   .image-grid img {
+      width: 150px;
+      height: 150px;
+   }
+}
+
+/*? Медиа-запрос для экранов шириной от 501px до 900px */
+@media (max-width: 900px) {
+   .image-grid {
+      grid-template-columns: repeat(2, 1fr);
+   }
+}
+
+/*? Медиа-запрос для экранов шириной до 500px */
+@media (max-width: 500px) {
+   .image-grid {
+      grid-template-columns: repeat(1, 1fr);
+   }
 }
